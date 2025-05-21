@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="icon.png">
+  <title>Form Pemesanan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+	<header class="navbar">
+		<div class="logo">Gatomatic</div>
+	
+		<!-- Hamburger Icon -->
+		<div class="hamburger" onclick="document.querySelector('.navbar').classList.toggle('active')">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</div>
+	
+		<!-- Navigation Menu -->
+		<nav class="menu">
+		  <a href="index.html">Beranda</a>
+		  <a href="produk.html">Produk</a>
+		  <a href="tentang.html">Tentang Kami</a>
+		  <a href="pembelian.html">Pembelian</a>
+		</nav>
+	
+		<!-- Auth Buttons -->
+		<div class="auth-buttons button-group">
+		  <div class="highlight-bg"></div>
+		  <a href="login.html" class="tab login">Log in</a>
+		  <a href="pembelian.html" class="tab buy">Buy Now</a>
+		</div>
+	  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>FORM PEMESANAN</h2>
+      <p>Silahkan isi form berikut untuk melakukan pemesanan</p>
+
+      <div class="card">
+        <h3>INFORMASI PRODUK</h3>
+        <div class="grid">
+          <div>
+            <label>Nama Produk</label>
+            <input type="text" value="GATOMATIC" readonly />
+          </div>
+          <div>
+            <label>Jumlah</label>
+            <input type="number" value="1" />
+          </div>
+          <div>
+            <label>Harga Satuan</label>
+            <input type="text" value="Rp 2.000.000" readonly />
+          </div>
+          <div>
+            <label>Total Harga</label>
+            <input type="text" value="Rp 2.000.000" readonly />
+          </div>
+        </div>
+      </div>
+
+      <form>
+        <div class="grid">
+          <input type="text" placeholder="Nama Lengkap" required />
+          <input type="text" placeholder="No. WhatsApp" required />
+          <input type="email" placeholder="Email" required />
+          <select required>
+            <option disabled selected>Pilih Provinsi</option>
+          </select>
+          <select required>
+            <option disabled selected>Pilih Kota/Kabupaten</option>
+          </select>
+          <select required>
+            <option disabled selected>Pilih Kecamatan</option>
+          </select>
+        </div>
+        <textarea placeholder="Alamat Lengkap" required></textarea>
+        <input type="text" placeholder="Kode Pos" />
+        <textarea placeholder="Catatan Pembeli"></textarea>
+
+        <h3>METODE PEMBAYARAN</h3>
+        <div class="payment">
+          <label><input type="radio" name="payment" checked /> Transfer Bank</label>
+          <div class="bank-options">
+            <label><input type="radio" name="bank" /> BCA - 1234567890 (GATOMATIC)</label>
+            <label><input type="radio" name="bank" /> BRI - 9876543210 (GATOMATIC)</label>
+            <label><input type="radio" name="bank" /> Mandiri - 5678901234 (GATOMATIC)</label>
+          </div>
+          <label><input type="radio" name="payment" /> E-Wallet</label>
+        </div>
+
+        <button type="submit">KIRIM PESANAN</button>
+      </form>
+    </section>
+  </main>
+
+		    <!-- Footer -->
+        <footer id="contact" class="text-white py-12">
+          <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8"> 
+            <!-- Logo -->
+            <div>
+              <img src="gatomatic-logo.png" alt="Gatomatic" width="150" height="31" loading="lazy">
+            </div>
+        
+            <!-- Informasi Perusahaan -->
+            <div>
+              <h3 class="text-xl font-bold mb-4">Gerbang Otomatis</h3>
+              <p class="mb-4">Solusi cerdas untuk menghemat waktu dan tenaga.</p>
+              <div class="flex space-x-4">
+                <a href="#"><i class="fab fa-facebook-f text-xl hover:text-blue-200"></i></a>
+                <a href="#"><i class="fab fa-instagram text-xl hover:text-blue-200"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in text-xl hover:text-blue-200"></i></a>
+              </div>
+            </div>
+        
+            <!-- Kontak -->
+            <div>
+              <h3 class="text-xl font-bold mb-4">Kontak</h3>
+              <p class="flex items-start mb-3"><i class="fas fa-map-marker-alt mr-2 mt-1"></i>Jl. Letjend Pol. Soemarto, Watumas, Purwanegara, Kec. Purwokerto Utara, Kab. Banyumas, Jawa Tengah 53127</p>
+              <p class="flex items-center mb-3"><i class="fas fa-phone mr-2"></i> +62 123 4567 890</p>
+              <p class="flex items-center"><i class="fas fa-envelope mr-2"></i> cs@Gatomatick.com</p>
+            </div>
+        
+          </div>
+        </footer>
+      
+   <script src="script.js"></script>
+
+</body>
+</html>
